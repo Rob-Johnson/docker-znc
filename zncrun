@@ -16,6 +16,7 @@ ZNC_HASH="sha256#$(echo -n ${ZNC_PASS}${ZNC_SALT} | sha256sum | awk '{print $1}'
 cat >.znc/configs/znc.conf <<EOF
 Listen     = 6667
 LoadModule = lastseen
+LoadModule = webadmin
 
 <User $ZNC_USER>
         Pass       = $ZNC_HASH
@@ -39,8 +40,8 @@ LoadModule = lastseen
 
         Server     = irc.freenode.net 6667
 
-        <Chan #dotcloud>
-        </Chan>
+        <Chan #sunglasses>
+	</Chan>
 </User>
 EOF
 exec znc -f
