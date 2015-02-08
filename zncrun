@@ -40,7 +40,7 @@ LoadModule = webadmin
 
         Server     = irc.freenode.net 6667
 
-        <Chan #sunglasses>
+        <Chan #docker>
 	</Chan>
 </User>
 EOF
